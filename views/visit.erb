@@ -3,10 +3,18 @@
 
 <form action="/visit" method="POST" role="form">
 
-  <%=@ok_message%>
-  <%=@name_error_message%>
-  <%=@phone_error_message%>
-  <%=@date_error_message%>
+  <div>
+    <%if @error then %>
+      <div class="alert alert-danger"><%=@error%></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%if @ok_message then %>
+      <div class="alert alert-success"><%=@ok_message%></div>
+    <% end %>
+
+  </div>
 
   <div class="form-group">
     <label>Ваше имя</label>
@@ -53,6 +61,8 @@
   <button type="submit" class="btn btn-primary">Записаться</button>
 
 </form>
+
+
 
 <script type="text/javascript">
     $(function () {

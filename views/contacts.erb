@@ -1,6 +1,12 @@
 <h2>Контакты</h2>
 <p>На этой странице вы можете отправить нам сообщение</p>
-<%=@sent_message%><br>
+
+<div>
+  <%if @sent_message then %>
+    <div class="alert alert-success"><%=@sent_message%></div>
+  <% end %>
+</div>
+
 <form action="/contacts" method="POST" role="form">
   <div class="form-group">
     <label>Ваш e-mail</label>

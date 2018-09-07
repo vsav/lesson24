@@ -35,16 +35,18 @@ post '/visit' do
     f = File.open('./public/visitors.txt', 'a')
     f.write "Name: #{@name}, Phone: #{@phone}, Visit date: #{@date}, Master: #{@master} \n"
     f.close
-
-  elsif @name == ""
-    @error = "Please enter your name"
-  elsif @phone == ""
-    @error = "Please enter your phone number"
-  elsif @date == ""
-    @error = "Please choose visit date"
+    return erb :visit
   end
 
-  erb :visit
+  errors = {:username => "Please enter your name",
+            :phone => "Please enter your phone number",
+            :datetime => "Please choose visit date"}
+  errors.each do |key, value|
+      if params[key]==""
+        @error = errors[key]
+        return erb :visit
+      end
+    end
 end
 
 post '/contacts' do

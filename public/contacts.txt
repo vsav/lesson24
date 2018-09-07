@@ -1,0 +1,34 @@
+ 
+ From: asf@asd.com
+ Message: <!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Тег textarea, атрибут required</title>
+ </head>
+ <body>
+  <form action="">
+   <p><input name="user" required placeholder="Ваше имя"></p>
+   <p><textarea name="comment" placeholder="Комментарий" required></textarea></p>
+   <p><input type="submit" value="Отправить"></p>
+  </form>
+ </body>
+</html> 
+ ********************************************************** 
+ 
+ From: asf@asd.com
+ Message: <!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Тег textarea, атрибут required</title>
+ </head>
+ <body>
+  <form action="">
+   <p><input name="user" required placeholder="Ваше имя"></p>
+   <p><textarea name="comment" placeholder="Комментарий" required></textarea></p>
+   <p><input type="submit" value="Отправить"></p>
+  </form>
+ </body>
+</html> 
+ ********************************************************** 
